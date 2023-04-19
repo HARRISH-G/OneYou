@@ -667,3 +667,23 @@ section {
     display: block;
   }
 }
+
+.signup-sec {
+  margin-top: 70px;
+}
+
+.know-sec {
+  margin-top: 2%;
+}
+.signup-btn {
+  border-radius: 35px;
+  background-color: #0070f4;
+  padding: 10px 25px;
+  margin: 2px;
+}
+.email-input {
+  border: 1px solid #0070f4;
+  border-radius: 7px;
+  padding: 6px 10px;
+
+}
