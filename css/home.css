@@ -1,0 +1,99 @@
+/* -----------Common CSS------------- */
+body {
+    min-height:100vh;
+    padding: 3% 0%;
+    font-family: 'Comfortaa', cursive;
+}
+
+#title {
+    padding: 0 15%;
+}
+
+
+#contact-us-freetrial {
+    background-color: #fafafa;
+    text-align: center;
+    padding: 1%;
+}
+
+.contact-text-2 {
+    font-size: 1.3rem;
+    margin: 2.2%;
+}
+
+
+
+@media (max-width: 992px) {
+    body {
+        padding-top: 12%;
+    }
+
+   
+    /* ------Section: Title------ */
+    #title {
+        padding: 8%;
+    }
+
+ 
+    .contact-text-2 {
+        font-size: 1rem;
+    }
+
+   
+
+}
+
+.upcoming-text{
+    position:relative;
+    float:right;
+    padding:0% 20%;
+    font-size: 1.2rem;
+    font-weight: 600;
+    font-family: sans-serif;
+}
+.signup-sec{
+    margin-top:70px;
+}
+.know-sec{
+    margin-top:2%;
+}
+.email-input{
+    border:1px solid #0070f4;
+    border-radius:7px;
+    padding:6px 10px;
+
+}
+.email-input:focus{
+    border: 1px solid #0070f4;
+}
+.home-page{
+    background-color: #fafafa;
+}
+.signup-btn {
+    border-radius: 35px;
+    background-color: #0070f4;
+    padding: 10px 25px;
+    margin:2px;
+}
+.home-header{
+    font-size:4rem;
+    font-weight: 700;
+    font-family: sans-serif;
+    margin-bottom:5%;
+}
+.signup-text{
+font-size:1.2rem;
+font-weight:600;
+font-family:sans-serif;
+}
+.know-more-btn{
+    font-size: 1.2rem;
+        font-weight: 600;
+        font-family: sans-serif;
+        color:#000;
+}
+.way-sec{
+    bottom:0;
+    position: absolute;
+    padding:3% 0% 0% 0%;
+}
