@@ -30,9 +30,12 @@
   <link rel="icon" href="images\favicon.ico">
   <script src="https://kit.fontawesome.com/6366f274c2.js" crossorigin="anonymous"></script>
 
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 </head>
 
 <body>
+  
 
   <!-- Nav Bar -->
   <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="nav1">
@@ -86,8 +89,10 @@
           <div class="signup-sec">
             <p class="signup-text">Signup for Early Bird Access</p>
             <div class="container-fluid">
-              <input class="email-input" type="text" name="email" placeholder="Enter Email" style="height: 6vh; width: 25vw;" />
-              <button class="btn signup-btn btn-sm btn-primary" type="button" name="button">Signup</button> <br>
+              <input class="email-input" id="email" type="email" name="email" placeholder="Enter Email" style="height: 6vh; width: 25vw;"  />
+             <!-- error and success message -->
+             <div id="usermessage"></div>
+              <button class="btn signup-btn btn-sm btn-primary" type="button" name="button" onclick="getEmaiId()">Signup</button> <br>
           
             </div>
             </div>
@@ -385,6 +390,38 @@
       </div>
     </div>
   </section>
+
+  <script>
+
+async function getEmaiId(value){
+var email=document.getElementById("email").value
+var failed ="";
+var success="";
+const data={
+  email:email
+}
+  var validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+
+  if (!email.match(validRegex)) {
+    document.getElementById("usermessage").innerText = "Invalid email address!"
+  }
+  else{
+ await axios
+    .post("https://api.yourbrandfolio.com/email/addEmail", data)
+    .then((response) => {
+    console.log(response )
+    if(response.data.code === 200){
+      document.getElementById("usermessage").innerText="Success."
+    }else if(response.data.code===400){
+       document.getElementById("usermessage").innerText = "Email already exist!"
+    }
+    })
+    .catch((error) => {console.error(error);
+     document.getElementById("usermessage").innerText = error;
+    });
+  }
+}
+  </script>
 </body>
 
 </html>

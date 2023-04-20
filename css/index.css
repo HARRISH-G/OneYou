@@ -58,7 +58,7 @@ section {
   font-size: 1.1rem;
 }
 
-.nav-item-button{
+.nav-item-button {
   padding-right: 0;
 }
 
@@ -326,11 +326,11 @@ section {
   margin: 50px 0;
 }
 
-.how-it-works-signup-link{
+.how-it-works-signup-link {
   color: black;
 }
 
-.how-it-works-signup-link:hover{
+.how-it-works-signup-link:hover {
   color: black;
 }
 
@@ -669,18 +669,20 @@ section {
 }
 
 .signup-sec {
-  margin-top: 70px;
+  margin-top: 10px;
 }
 
 .know-sec {
   margin-top: 2%;
 }
+
 .signup-btn {
   border-radius: 35px;
   background-color: #0070f4;
   padding: 10px 25px;
   margin: 2px;
 }
+
 .email-input {
   border: 1px solid #0070f4;
   border-radius: 7px;
