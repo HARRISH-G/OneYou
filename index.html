@@ -51,12 +51,12 @@
         <li class="nav-item">
           <a class="nav-link" href="#live-pages">Live Pages</a>
         </li> -->
-        <!-- <li class="nav-item">
-          <a class="nav-link" href="about.html">About Us</a>s
+        <li class="nav-item">
+          <a class="nav-link" href="about.html">About Us</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="features.html">Features</a>
-        </li>  -->
+        </li> 
         <li class="nav-item nav-item-button">
           <button class="btn nav-btn btn-sm btn-primary" type="button" name="button"> <a class="nav-link">Coming Soon</a></button>
         </li>
@@ -141,7 +141,7 @@
   </section>
 
   <!-- Live Pages -->
-  <!-- <section id="live-pages">
+  <section id="live-pages">
     <div class="container-fluid">
       <h2 class="section-heading">Many Students and Professionals are using Oneyou.in to launch their portfolio.</h2>
       <h4 class="live-pages-tagline">Meet Our Team</h4>
@@ -175,7 +175,7 @@
           </div>
         </div>
       </div>
-      <div class="row">
+      <!-- <div class="row">
         <div class="col-md-6">
           <div class="live-page-tile live-page-left-tile">
             <div class="row">
@@ -203,7 +203,7 @@
               </div>
             </div>
           </div>
-        </div>
+        </div> -->
       </div>
       <div class="live-page-button-div">
         <a href="about.html">
@@ -211,7 +211,7 @@
         </a>
       </div>
     </div>
-  </section> -->
+  </section>
 
   <!-- How it works -->
   <section id="how-it-works">
@@ -411,10 +411,10 @@ const data={
     .then((response) => {
     console.log(response )
     if(response.data.code === 200){
-      document.getElementById("usermessage").innerText="Success."
+      document.getElementById("usermessage").innerText="Congrats!,Lets Grow Together."
       document.getElementById("usermessage").className="validmsg"
     }else if(response.data.code===400){
-       document.getElementById("usermessage").innerText = "Email already exist!"
+       document.getElementById("usermessage").innerText = "Congrats, Again,Your already Signed Up."
        document.getElementById("usermessage").className = "invalidmsg"
     }
     })
