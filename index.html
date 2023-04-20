@@ -91,9 +91,8 @@
             <div class="container-fluid">
               <input class="email-input" id="email" type="email" name="email" placeholder="Enter Email" style="height: 6vh; width: 25vw;"  />
              <!-- error and success message -->
-             <div id="usermessage"></div>
               <button class="btn signup-btn btn-sm btn-primary" type="button" name="button" onclick="getEmaiId()">Signup</button> <br>
-          
+          <div class="" id="usermessage"></div>
             </div>
             </div>
             <div class="know-sec">
@@ -404,6 +403,7 @@ const data={
 
   if (!email.match(validRegex)) {
     document.getElementById("usermessage").innerText = "Invalid email address!"
+    document.getElementById("usermessage").className = "invalidmsg"
   }
   else{
  await axios
@@ -412,12 +412,16 @@ const data={
     console.log(response )
     if(response.data.code === 200){
       document.getElementById("usermessage").innerText="Success."
+      document.getElementById("usermessage").className="validmsg"
     }else if(response.data.code===400){
        document.getElementById("usermessage").innerText = "Email already exist!"
+       document.getElementById("usermessage").className = "invalidmsg"
     }
     })
     .catch((error) => {console.error(error);
      document.getElementById("usermessage").innerText = error;
+     document.getElementById("usermessage").className = "invalidmsg"
+     
     });
   }
 }

@@ -689,3 +689,13 @@ section {
   padding: 6px 10px;
 
 }
+.invalidmsg{
+  color:red;
+  font-size: 14px;
+  font-weight:900;
+}
+.validmsg{
+  font-size:14px;
+  color:green;
+  font-weight:900;
+}
